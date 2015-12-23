@@ -1,0 +1,19 @@
+package com.example.myfirstvaadin.client.mycomponent;
+
+import com.google.gwt.user.client.ui.Label;
+
+// TODO extend any GWT Widget
+public class MyComponentWidget extends Label {
+
+	public static final String CLASSNAME = "mycomponent";
+
+	public MyComponentWidget() {
+
+		// setText("MyComponent sets  text via MyComponentConnector using MyComponentState");
+		setStyleName(CLASSNAME);
+		
+		setText("This is MyWidget");
+
+	}
+
+}
