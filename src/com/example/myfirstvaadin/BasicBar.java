@@ -12,6 +12,7 @@ import com.vaadin.addon.charts.model.LayoutDirection;
 import com.vaadin.addon.charts.model.Legend;
 import com.vaadin.addon.charts.model.ListSeries;
 import com.vaadin.addon.charts.model.PlotOptionsBar;
+import com.vaadin.addon.charts.model.Title;
 import com.vaadin.addon.charts.model.Tooltip;
 import com.vaadin.addon.charts.model.VerticalAlign;
 import com.vaadin.addon.charts.model.XAxis;
@@ -27,21 +28,23 @@ public class BasicBar {
 
 	public Component getChart(){
 		
-		Chart chart = new Chart(ChartType.BAR);
+		Chart chart = new Chart(ChartType.PIE);
 		
 		Configuration conf = new Configuration();
-		
+
 		conf.setTitle("Historic World Population By region");
 		conf.setSubTitle("Source: Wikipedia.org");
 		
 		XAxis x = new XAxis();
 		x.setCategories(new String[]{"Africa","America","Asia", "Europe", "Oceania"});
-		// x.setTitle(new AxisTitle(new AxisTitle((String) null));
+		x.setTitle(new Title((String) null));
 		conf.addxAxis(x);
 		
 		YAxis y = new YAxis();
 		y.setMin(0);
-		y.setTitle(new String("Population (millions)"));
+		Title title = new Title("Population (millions)");
+		title.setVerticalAlign(VerticalAlign.MIDDLE);
+		y.setTitle(title);
 		conf.addyAxis(y);
 		
 		Tooltip tooltip = new Tooltip();
@@ -51,6 +54,7 @@ public class BasicBar {
 		
 		// Plot option should be consistent with Charttype
 		PlotOptionsBar plot = new PlotOptionsBar();
+
 		Labels barLabel = new Labels();
 		plot.setDataLabels(barLabel);
 		conf.setPlotOptions(plot);
@@ -72,13 +76,15 @@ public class BasicBar {
 		conf.disableCredits();
 		
 		// get data ready
-		List series = new ArrayList<ListSeries>();
+		List series = new ArrayList();
 		series.add(new ListSeries("Year 1800", 107, 31, 635, 203, 2));
-		series.add(new ListSeries("Year 1900", 133, 156, 947, 408, 6));
-		series.add(new ListSeries("Year 2008", 973, 914, 4054, 732, 34));
+//		series.add(new ListSeries("Year 1900", 133, 156, 947, 408, 6));
+//		series.add(new ListSeries("Year 2008", 973, 914, 4054, 732, 34));
 		conf.setSeries(series);
-		
+
 		chart.drawChart(conf);
+
+		
 		return chart;
 	}
 	

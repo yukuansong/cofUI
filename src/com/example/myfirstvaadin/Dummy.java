@@ -1,8 +1,49 @@
 package com.example.myfirstvaadin;
 
 import com.github.wolfie.refresher.Refresher;
+import com.vaadin.addon.charts.Chart;
+import com.vaadin.addon.charts.model.ChartType;
+import com.vaadin.addon.charts.model.Configuration;
+import com.vaadin.addon.charts.model.ListSeries;
+import com.vaadin.addon.charts.model.PlotOptionsBar;
+import com.vaadin.addon.charts.model.XAxis;
+import com.vaadin.addon.charts.model.YAxis;
 
 public class Dummy {
+//	
+//	// Chart testing section
+//	Chart testChart = new Chart(ChartType.BAR);
+//	testChart.setWidth("300px");
+//	testChart.setHeight("300px");
+//	Configuration conf = testChart.getConfiguration();
+//	conf.setTitle("Planets");
+//	conf.setSubTitle("This is the subtitle");
+//	conf.getLegend().setEnabled(false);
+//	// Disable markers form lines
+//	PlotOptionsBar plotOptions = new PlotOptionsBar();
+//	// plotOptions.setMarker(new Marker(false));
+//	conf.setPlotOptions(plotOptions);
+//
+//	// The data
+//	ListSeries series = new ListSeries("Diameter");
+//	series.setData(4900, 12100, 12800, 6800, 143000, 125000, 51100, 49500);
+//	conf.addSeries(series);
+//
+//	// The X axis
+//	XAxis x = new XAxis();
+//	x.setCategories("Mercury", "Venus", "Earth", "mars", "Jupiter", "Saturn", "Uranus", "Neptune");
+//	x.setTitle("Planet name ");
+//	conf.addxAxis(x);
+//
+//	// The Y Axis
+//	YAxis y = new YAxis();
+//	y.setTitle("Diameter Value");
+//	// y.getLabels().setfor;
+//	// y.getLabels().setStep(2);
+//	conf.addyAxis(y);
+//
+//	gridLayout.addComponent(testChart);
+//	
 //	setContent(layout);
 	
 //	Grid grid = new Grid();

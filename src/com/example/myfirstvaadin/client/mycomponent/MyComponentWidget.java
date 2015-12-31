@@ -9,10 +9,8 @@ public class MyComponentWidget extends Label {
 
 	public MyComponentWidget() {
 
-		// setText("MyComponent sets  text via MyComponentConnector using MyComponentState");
+		// setText("MyComponent sets the text via MyComponentConnector using MyComponentState");
 		setStyleName(CLASSNAME);
-		
-		setText("This is MyWidget");
 
 	}
 
