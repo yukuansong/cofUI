@@ -1,19 +1,11 @@
 package com.example.myfirstvaadin;
 
-import java.sql.SQLException;
-
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
-import com.vaadin.data.util.sqlcontainer.SQLContainer;
-import com.vaadin.data.util.sqlcontainer.connection.JDBCConnectionPool;
-import com.vaadin.data.util.sqlcontainer.connection.SimpleJDBCConnectionPool;
-import com.vaadin.data.util.sqlcontainer.query.TableQuery;
-import com.vaadin.data.util.sqlcontainer.query.generator.OracleGenerator;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.Grid;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TabSheet;
