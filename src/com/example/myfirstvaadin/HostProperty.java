@@ -1,6 +1,8 @@
 package com.example.myfirstvaadin;
 
-public class HostProperty {
+import java.io.Serializable;
+
+public class HostProperty implements Serializable {
 	
 	public String getName() {
 		return name;
